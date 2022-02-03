@@ -100,6 +100,6 @@ module timeSynchronizer#(
     );
     
     always_ff@(posedge clk)
-        toa_counter <= (time_corrected + (1'b1)) >> 1;
+        toa_counter <= (time_corrected + (1'b1)) >> 1; // Rounding
        
 endmodule
