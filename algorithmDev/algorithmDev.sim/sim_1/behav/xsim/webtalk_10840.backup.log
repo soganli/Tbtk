@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun May  9 23:07:15 2021
+# Process ID: 10840
+# Current directory: /home/soganli/VivadoProjects/AlgorithmTest/AlgorithmTest.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /home/soganli/VivadoProjects/AlgorithmTest/AlgorithmTest.sim/sim_1/behav/xsim/xsim.dir/fftDecimatorTrigger_test_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /home/soganli/VivadoProjects/AlgorithmTest/AlgorithmTest.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /home/soganli/VivadoProjects/AlgorithmTest/AlgorithmTest.sim/sim_1/behav/xsim/webtalk.jou
+#-----------------------------------------------------------
+source /home/soganli/VivadoProjects/AlgorithmTest/AlgorithmTest.sim/sim_1/behav/xsim/xsim.dir/fftDecimatorTrigger_test_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Sun May  9 23:07:15 2021...

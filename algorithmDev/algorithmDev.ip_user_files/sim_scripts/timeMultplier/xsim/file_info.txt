@@ -1,0 +1,1 @@
+timeMultplier.vhd,vhdl,xil_defaultlib,../../../ip/timeMultplier/sim/timeMultplier.vhd,
