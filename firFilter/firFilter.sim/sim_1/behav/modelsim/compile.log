@@ -1,0 +1,97 @@
+# do {cordicTest_test_compile.do}
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/work".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xbip_utils_v3_0_10".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/c_reg_fd_v12_0_6".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xbip_dsp48_wrapper_v3_0_4".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xbip_pipe_v3_0_6".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xbip_dsp48_addsub_v3_0_6".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xbip_addsub_v3_0_6".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/c_addsub_v12_0_14".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xbip_bram18k_v3_0_6".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/mult_gen_v12_0_16".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/axi_utils_v2_0_6".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/cordic_v6_0_16".
+# 
+# ** Warning: (vlib-34) Library already exists at "modelsim_lib/msim/xil_defaultlib".
+# 
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap xbip_utils_v3_0_10 modelsim_lib/msim/xbip_utils_v3_0_10 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap c_reg_fd_v12_0_6 modelsim_lib/msim/c_reg_fd_v12_0_6 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap xbip_dsp48_wrapper_v3_0_4 modelsim_lib/msim/xbip_dsp48_wrapper_v3_0_4 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap xbip_pipe_v3_0_6 modelsim_lib/msim/xbip_pipe_v3_0_6 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap xbip_dsp48_addsub_v3_0_6 modelsim_lib/msim/xbip_dsp48_addsub_v3_0_6 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap xbip_addsub_v3_0_6 modelsim_lib/msim/xbip_addsub_v3_0_6 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap c_addsub_v12_0_14 modelsim_lib/msim/c_addsub_v12_0_14 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap xbip_bram18k_v3_0_6 modelsim_lib/msim/xbip_bram18k_v3_0_6 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap mult_gen_v12_0_16 modelsim_lib/msim/mult_gen_v12_0_16 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap axi_utils_v2_0_6 modelsim_lib/msim/axi_utils_v2_0_6 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap cordic_v6_0_16 modelsim_lib/msim/cordic_v6_0_16 
+# Modifying modelsim.ini
+# Model Technology ModelSim PE vmap 10.4a Lib Mapping Utility 2015.03 Apr  7 2015
+# vmap xil_defaultlib modelsim_lib/msim/xil_defaultlib 
+# Modifying modelsim.ini
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# 
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 23:56:48 on Sep 22,2020
+# vcom -64 -93 -work xbip_utils_v3_0_10 ../../../../AlgorithmTest.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd 
+# -- Loading package STANDARD
+# ** Error: ../../../../AlgorithmTest.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd(70): near "AES128-CBC": Unknown session key in protected region
+# ** Error: ../../../../AlgorithmTest.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd(71): VHDL Compiler exiting
+# End time: 23:56:48 on Sep 22,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# child process exited abnormally
+# Error in macro ./cordicTest_test_compile.do line 40
+# ** Warning: (vcom-159) Mode option -64 is not supported in this context and will be ignored.
+# 
+# Model Technology ModelSim PE Student Edition vcom 10.4a Compiler 2015.03 Apr  7 2015
+# Start time: 23:56:48 on Sep 22,2020
+# vcom -64 -93 -work xbip_utils_v3_0_10 ../../../../AlgorithmTest.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd 
+# -- Loading package STANDARD
+# ** Error: ../../../../AlgorithmTest.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd(70): near "AES128-CBC": Unknown session key in protected region
+# ** Error: ../../../../AlgorithmTest.ip_user_files/ipstatic/hdl/xbip_utils_v3_0_vh_rfs.vhd(71): VHDL Compiler exiting
+# End time: 23:56:48 on Sep 22,2020, Elapsed time: 0:00:00
+# Errors: 2, Warnings: 1
+# child process exited abnormally
+#     while executing
+# "exec <nul: {D:\Modeltech_pe_edu_10.4a\win32pe_edu\vcom.EXE} -64 -93 -work xbip_utils_v3_0_10 ../../../../AlgorithmTest.ip_user_files/ipstatic/hdl/xbip..."
+#     ("uplevel" body line 1)
+#     invoked from within
+# "uplevel 1 exec $redir $new [lrange $args 1 end]"
+#     (procedure "::unknown" line 47)
+#     invoked from within
+# "D:\\Modeltech_pe_edu_10.4a\\win32pe_edu\\vcom -64 -93 -work xbip_utils_v3_0_10  \
+# "../../../../AlgorithmTest.ip_user_files/ipstatic/hdl/xbip_utils_v3_..."

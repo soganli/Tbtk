@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../algorithmDev.srcs/sources_1/new/memoryGenerator.sv" \
+"../../../../algorithmDev.srcs/sources_1/new/timeSynchronizer.sv" \
+"../../../../algorithmDev.srcs/sim_1/new/timeSynchronizer_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

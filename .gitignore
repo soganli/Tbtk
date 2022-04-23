@@ -1,4 +1,6 @@
 **/*.cache/**
 **/*.hw/**
 **/*.ip_user_files/**
+.jou
+.log
 

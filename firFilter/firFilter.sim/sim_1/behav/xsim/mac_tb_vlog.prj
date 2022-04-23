@@ -1,0 +1,10 @@
+# compile verilog/system verilog design source files
+sv xil_defaultlib  \
+"../../../../firFilter.srcs/sources_1/new/mac.sv" \
+"../../../../firFilter.srcs/sim_1/new/mac_tb.sv" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort
