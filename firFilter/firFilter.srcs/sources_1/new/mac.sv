@@ -87,7 +87,7 @@ module mac#(
                 b_reg_s  <= b_reg;
                 c_reg_s  <= c_reg;
                 pre_add  <= a_reg;
-            end
+            end                        
     endgenerate    
     
     logic signed [PRODUCT_SIZE-1:0] p_mid;

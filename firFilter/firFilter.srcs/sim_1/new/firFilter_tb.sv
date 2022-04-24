@@ -26,11 +26,17 @@ module firFilter_tb;
     parameter DECIMATION_NUMBER     = 1; // If this is a Decimation Filter
     parameter INTERPOLATION_NUMBER  = 1; // If this is an Interpolation Filter
     parameter FILTER_LENGTH         = 31;
-    parameter FILTER_IS_SYMMETRIC   = 1;
+    parameter FILTER_IS_SYMMETRIC   = 0;
     parameter A_WIDTH               = 16;
     parameter B_WIDTH               = 16;
     parameter O_WIDTH               = A_WIDTH+B_WIDTH;
     
+
+integer i=0,s_axis_data_tdata_file;
+localparam SampleNumber = 2 ** 14;
+logic [A_WIDTH-1:0] s_axis_data_tdata_set [SampleNumber-1:0];
+
+
     
 logic a_clk=0,a_resetn=1;    
     
@@ -69,22 +75,36 @@ uut
 logic data_enable;
 initial
 begin
+
+    s_axis_data_tdata_file = $fopen("/home/soganli/MATLABFiles/firFilter/s_axis_data_tdata.txt", "r");
+
+    while (! $feof(s_axis_data_tdata_file)) begin //read until an "end of file" is reached.
+        $fscanf(s_axis_data_tdata_file,"%d\n",s_axis_data_tdata_set[i]); 
+        i = i + 1;
+    end 
+    
+    $fclose(s_axis_data_tdata_file);
+
     data_enable = 0;
     #30;
     data_enable = 1;
-    #2000;
+    
+    #20000;
     $stop;
 end   
 
+logic [14-1:0]  data_count=0;
 always_ff@(posedge a_clk)
 begin
     if(data_enable)
     begin
-        s_axis_data_tdata   <= s_axis_data_tdata + 1;
+        data_count          <= data_count + 1;
+        s_axis_data_tdata   <= s_axis_data_tdata_set[data_count];
         s_axis_data_tvalid  <= 1;
     end
     else
     begin
+        data_count          <= 0;
         s_axis_data_tdata   <= 0;
         s_axis_data_tvalid  <= 0;
     end

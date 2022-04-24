@@ -8,9 +8,10 @@ Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
 Time Resolution for simulation is 1ps
-Compiling module xil_defaultlib.mac(POST_ADDITION=0)
-Compiling module xil_defaultlib.mac_default
-Compiling module xil_defaultlib.firFilter(O_WIDTH=32)
+Compiling module xil_defaultlib.mac(PRE_ADDITION=0,POST_ADDITION...
+Compiling module xil_defaultlib.mac(PRE_ADDITION=0,REGISTER_OUTP...
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=0,...
 Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
 Compiling module xil_defaultlib.glbl
 Built simulation snapshot firFilter_tb_behav

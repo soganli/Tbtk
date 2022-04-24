@@ -41,7 +41,7 @@ module firFilter#(
     output                         m_axis_data_tvalid
     );
     
-    localparam DSP_NUMBER = (FILTER_LENGTH/2+1);
+    localparam DSP_NUMBER = FILTER_IS_SYMMETRIC ? (FILTER_LENGTH/2+1) : FILTER_LENGTH;
 
     logic   [B_WIDTH-1:0]    COEF_MEM  [FILTER_LENGTH-1:0];
     
@@ -52,10 +52,10 @@ module firFilter#(
     
 
     
-    logic signed [(FILTER_LENGTH/2+1)*A_WIDTH-1:0]  tdata_buffer;
+    logic signed [DSP_NUMBER*A_WIDTH-1:0]  tdata_buffer;
     always_ff@(posedge a_clk)
         if(s_axis_data_tvalid)
-            tdata_buffer    <= {tdata_buffer[(FILTER_LENGTH/2)*A_WIDTH-1:0],s_axis_data_tdata};
+            tdata_buffer    <= {tdata_buffer[(DSP_NUMBER-1)*A_WIDTH-1:0],s_axis_data_tdata};
     
     
     logic signed [DSP_NUMBER*(A_WIDTH+B_WIDTH)-1:0] mac_buffer;
@@ -91,7 +91,7 @@ module firFilter#(
             .PRE_ADDITION(FILTER_IS_SYMMETRIC),
             .POST_ADDITION(1),
             .REGISTER_INPUT(1),
-            .REGISTER_OUTPUT(1),
+            .REGISTER_OUTPUT(0),
             .A_WIDTH(A_WIDTH),
             .B_WIDTH(B_WIDTH),
             .C_WIDTH(A_WIDTH+B_WIDTH),
