@@ -25,6 +25,7 @@ module mac#(
     parameter POST_ADDITION   = 1,
     parameter REGISTER_INPUT  = 1,
     parameter REGISTER_OUTPUT = 1,
+    parameter FILTER_IS_SYMMETRIC = 1,    
     parameter A_WIDTH         = 16,
     parameter B_WIDTH         = 16,
     parameter C_WIDTH         = 32,
@@ -50,7 +51,7 @@ module mac#(
     logic signed [B_WIDTH-1:0]  b_reg;
     logic signed [C_WIDTH-1:0]  c_reg;
     logic signed [D_WIDTH-1:0]  d_reg;
-    
+        
     generate
         if(REGISTER_INPUT)
             always_ff@(posedge clk)
@@ -72,20 +73,17 @@ module mac#(
     
     logic signed [PRE_ADD_SIZE-1 :0]  pre_add;
     logic signed [B_WIDTH-1:0]        b_reg_s;
-    logic signed [C_WIDTH-1:0]        c_reg_s;
     generate
         if(PRE_ADDITION)
             always_ff@(posedge clk)
             begin
                 b_reg_s   <= b_reg;
-                c_reg_s   <= c_reg;
                 pre_add   <= a_reg + d_reg;
             end
         else
             always_comb
             begin
                 b_reg_s  <= b_reg;
-                c_reg_s  <= c_reg;
                 pre_add  <= a_reg;
             end                        
     endgenerate    
@@ -95,15 +93,15 @@ module mac#(
         p_mid   <= b_reg_s * pre_add;
     
     logic signed [PRODUCT_SIZE-1:0] p_pre,p_reg;
-    generate
+    generate        
         if(POST_ADDITION)
         always_ff@(posedge clk)
-            p_pre   <= p_mid + c_reg_s;
+            p_pre   <= p_mid + c_reg;
         else
         always_comb
             p_pre   <= p_mid;
     endgenerate
-            
+
     generate
         if(REGISTER_OUTPUT)
             always_ff@(posedge clk)
@@ -112,6 +110,7 @@ module mac#(
             always_comb
                 p_reg   <= p_pre;
     endgenerate 
+                
     
     assign p = p_reg;  
         

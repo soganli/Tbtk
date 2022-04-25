@@ -1,0 +1,953 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Sun Apr 24 22:41:07 2022
+# Process ID: 5749
+# Current directory: /home/soganli/git_workspace/Tbtk
+# Command line: vivado
+# Log file: /home/soganli/git_workspace/Tbtk/vivado.log
+# Journal file: /home/soganli/git_workspace/Tbtk/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/soganli/git_workspace/Tbtk/firFilter/firFilter.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/opt/Xilinx/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3705] select index 495 into 'mac_data_in' is out of bounds [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:106]
+WARNING: [VRFC 10-3705] select index 479 into 'mac_data_in' is out of bounds [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "firFilter_tb_behav -key {Behavioral:sim_1:Functional:firFilter_tb} -tclbatch {firFilter_tb.tcl} -view {/home/soganli/git_workspace/Tbtk/firFilter/firFilter_tb_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+open_wave_config /home/soganli/git_workspace/Tbtk/firFilter/firFilter_tb_behav.wcfg
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /a was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /b was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /c was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /d was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /clk was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /rstn was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /p was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /a_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /b_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /c_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /d_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /pre_add was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /b_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /c_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /p_mid was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /p_pre was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[0].genblk1.DSP_MAC_MODULE_0 /p_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /a was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /b was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /c was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /d was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /clk was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /rstn was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /p was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /a_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /b_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /c_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /d_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /pre_add was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /b_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /c_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /p_mid was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /p_pre was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[1].genblk1.DSP_MAC_MODULE_I /p_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /a was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /b was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /c was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /d was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /clk was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /rstn was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /p was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /a_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /b_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /c_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /d_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /pre_add was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /b_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /c_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /p_mid was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /p_pre was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[2].genblk1.DSP_MAC_MODULE_I /p_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /a was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /b was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /c was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /d was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /clk was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /rstn was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /p was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /a_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /b_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /c_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /d_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /pre_add was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /b_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /c_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /p_mid was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /p_pre was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[3].genblk1.DSP_MAC_MODULE_I /p_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /a was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /b was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /c was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /d was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /clk was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /rstn was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /p was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /a_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /b_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /c_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /d_reg was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /pre_add was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /b_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /c_reg_s was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /p_mid was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /p_pre was not found in the design.
+WARNING: Simulation object /firFilter_tb/uut/\genblk1[30].genblk1.DSP_MAC_MODULE_I /p_reg was not found in the design.
+source firFilter_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'firFilter_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 7483.199 ; gain = 20.781 ; free physical = 6082 ; free virtual = 18826
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+ERROR: [VRFC 10-2989] 'mac_data_in' is not declared [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:108]
+ERROR: [VRFC 10-2989] 'mac_data_in' is not declared [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:111]
+ERROR: [VRFC 10-2989] 'mac_data_in' is not declared [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:131]
+ERROR: [VRFC 10-2989] 'mac_data_in' is not declared [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:134]
+ERROR: [VRFC 10-2865] module 'firFilter' ignored due to previous errors [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:22]
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/xvlog.log'
+ERROR: [USF-XSim-62] 'compile' step failed with error(s). Please check the Tcl console output or '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/xvlog.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+ERROR: [Common 17-69] Command failed: ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7673.277 ; gain = 22.008 ; free physical = 5895 ; free virtual = 18608
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7673.277 ; gain = 0.000 ; free physical = 5820 ; free virtual = 18549
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7697.289 ; gain = 24.012 ; free physical = 5793 ; free virtual = 18518
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7713.297 ; gain = 16.008 ; free physical = 5790 ; free virtual = 18526
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+WARNING: [VRFC 10-3705] select index 496 into 'mac_data_in' is out of bounds [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:126]
+WARNING: [VRFC 10-3705] select index 31 into 'COEF_MEM' is out of bounds [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:127]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(PRE_ADDITION=0,POST_ADDITION...
+Compiling module xil_defaultlib.mac(PRE_ADDITION=0,REGISTER_OUTP...
+Compiling module xil_defaultlib.firFilter(O_WIDTH=32)
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7721.301 ; gain = 8.004 ; free physical = 4659 ; free virtual = 17939
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(PRE_ADDITION=0,POST_ADDITION...
+Compiling module xil_defaultlib.mac(PRE_ADDITION=0,REGISTER_OUTP...
+Compiling module xil_defaultlib.firFilter(O_WIDTH=32)
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7721.301 ; gain = 0.000 ; free physical = 4572 ; free virtual = 17870
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(PRE_ADDITION=0,POST_ADDITION...
+Compiling module xil_defaultlib.mac(PRE_ADDITION=0,REGISTER_OUTP...
+Compiling module xil_defaultlib.firFilter(O_WIDTH=32)
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7747.312 ; gain = 11.004 ; free physical = 4545 ; free virtual = 17848
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7755.316 ; gain = 8.004 ; free physical = 4533 ; free virtual = 17836
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7763.320 ; gain = 8.004 ; free physical = 4513 ; free virtual = 17819
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 7849.152 ; gain = 61.031 ; free physical = 3150 ; free virtual = 16985
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93
+relaunch_sim
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/opt/Xilinx/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'firFilter_tb' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/firCoefficients.mem'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -L uvm -prj firFilter_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module mac
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module firFilter_tb
+Waiting for jobs to finish...
+No pending jobs, compilation finished.
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+Command: launch_simulation -simset sim_1 -mode behavioral
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim'
+xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 84a1c1dbce8b45ed911d0f19ab934f41 --incr --debug typical --relax --mt 8 -L xil_defaultlib -L uvm -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot firFilter_tb_behav xil_defaultlib.firFilter_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 16 for port 'd' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:129]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.mac(POST_ADDITION=0)
+Compiling module xil_defaultlib.mac(REGISTER_OUTPUT=0)
+Compiling module xil_defaultlib.firFilter(FILTER_IS_SYMMETRIC=1,...
+Compiling module xil_defaultlib.firFilter_tb
+WARNING: [XSIM 43-3373] "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 82. System function $fscanf is used as system task. This system function should have a LHS e.g. x=$fscanf().
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot firFilter_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 7865.160 ; gain = 16.008 ; free physical = 3133 ; free virtual = 16966
+restart
+INFO: [Simtcl 6-17] Simulation restarted
+run all
+$stop called at time : 20030 ns : File "/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sim_1/new/firFilter_tb.sv" Line 93

@@ -21,9 +21,9 @@
 
 
 module firFilter_tb;
-    parameter DATA_RATIO            = 1;           // Ratio of data_clk to system_clk
-    parameter FILTER_TYPE           = 0;          // 0: SingleRate , 1:Decimation, 2:Interpolation
-    parameter DECIMATION_NUMBER     = 1; // If this is a Decimation Filter
+    parameter DATA_RATIO            = 2; // Ratio of data_clk to system_clk
+    parameter FILTER_TYPE           = 0; // 0: SingleRate , 1:Decimation, 2:Interpolation
+    parameter DECIMATION_NUMBER     = 2; // If this is a Decimation Filter
     parameter INTERPOLATION_NUMBER  = 1; // If this is an Interpolation Filter
     parameter FILTER_LENGTH         = 31;
     parameter FILTER_IS_SYMMETRIC   = 0;
@@ -94,21 +94,41 @@ begin
 end   
 
 logic [14-1:0]  data_count=0;
-always_ff@(posedge a_clk)
-begin
-    if(data_enable)
+generate
+if(DATA_RATIO == 1)
+
+    always_ff@(posedge a_clk)
     begin
-        data_count          <= data_count + 1;
-        s_axis_data_tdata   <= s_axis_data_tdata_set[data_count];
-        s_axis_data_tvalid  <= 1;
+        if(data_enable)
+        begin
+            data_count          <= data_count + 1;
+            s_axis_data_tdata   <= s_axis_data_tdata_set[data_count];
+            s_axis_data_tvalid  <= 1;
+        end
+        else
+        begin
+            data_count          <= 0;
+            s_axis_data_tdata   <= 0;
+            s_axis_data_tvalid  <= 0;
+        end
     end
-    else
+else
+    always_ff@(posedge a_clk)
     begin
-        data_count          <= 0;
-        s_axis_data_tdata   <= 0;
-        s_axis_data_tvalid  <= 0;
+        if(data_enable)
+        begin
+            data_count          <= data_count + 1;
+            s_axis_data_tdata   <= data_count[14-1:1]; // s_axis_data_tdata_set[data_count[14-1:1]];
+            s_axis_data_tvalid  <= ~data_count[0];
+        end
+        else
+        begin
+            data_count          <= 0;
+            s_axis_data_tdata   <= 0;
+            s_axis_data_tvalid  <= 0;
+        end
     end
-end
+endgenerate
         
 always 
    #2.5 a_clk = ~a_clk;  

@@ -16,27 +16,30 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xcku115
 INFO: [Device 21-403] Loading part xcku115-flvb2104-2-i
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 4 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16032
+INFO: [Synth 8-7075] Helper process launched with PID 18895
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2554.793 ; gain = 160.715 ; free physical = 5008 ; free virtual = 18054
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2554.797 ; gain = 162.715 ; free physical = 5606 ; free virtual = 18847
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'firFilter' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:22]
 	Parameter DATA_RATIO bound to: 1 - type: integer 
 	Parameter FILTER_TYPE bound to: 0 - type: integer 
-	Parameter DECIMATION_NUMBER bound to: 1 - type: integer 
+	Parameter DECIMATION_NUMBER bound to: 2 - type: integer 
 	Parameter INTERPOLATION_NUMBER bound to: 1 - type: integer 
 	Parameter FILTER_LENGTH bound to: 31 - type: integer 
-	Parameter FILTER_IS_SYMMETRIC bound to: 0 - type: integer 
+	Parameter FILTER_IS_SYMMETRIC bound to: 1 - type: integer 
 	Parameter A_WIDTH bound to: 16 - type: integer 
 	Parameter B_WIDTH bound to: 16 - type: integer 
 	Parameter O_WIDTH bound to: 32 - type: integer 
-	Parameter DSP_NUMBER bound to: 31 - type: integer 
-INFO: [Synth 8-3876] $readmem data file 'firCoefficients.mem' is read successfully [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:50]
+	Parameter DSP_DECIM bound to: 1 - type: integer 
+	Parameter DSP_NUMBER bound to: 16 - type: integer 
+	Parameter BUFFER_LEN bound to: 62 - type: integer 
+INFO: [Synth 8-3876] $readmem data file 'firCoefficients.mem' is read successfully [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:53]
 INFO: [Synth 8-6157] synthesizing module 'mac' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv:23]
-	Parameter PRE_ADDITION bound to: 0 - type: integer 
+	Parameter PRE_ADDITION bound to: 1 - type: integer 
 	Parameter POST_ADDITION bound to: 0 - type: integer 
 	Parameter REGISTER_INPUT bound to: 1 - type: integer 
 	Parameter REGISTER_OUTPUT bound to: 1 - type: integer 
+	Parameter FILTER_IS_SYMMETRIC bound to: 1 - type: integer 
 	Parameter A_WIDTH bound to: 16 - type: integer 
 	Parameter B_WIDTH bound to: 16 - type: integer 
 	Parameter C_WIDTH bound to: 32 - type: integer 
@@ -46,10 +49,11 @@ INFO: [Synth 8-6157] synthesizing module 'mac' [/home/soganli/git_workspace/Tbtk
 	Parameter PRODUCT_SIZE bound to: 33 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'mac' (1#1) [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'mac__parameterized0' [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv:23]
-	Parameter PRE_ADDITION bound to: 0 - type: integer 
+	Parameter PRE_ADDITION bound to: 1 - type: integer 
 	Parameter POST_ADDITION bound to: 1 - type: integer 
 	Parameter REGISTER_INPUT bound to: 1 - type: integer 
 	Parameter REGISTER_OUTPUT bound to: 0 - type: integer 
+	Parameter FILTER_IS_SYMMETRIC bound to: 1 - type: integer 
 	Parameter A_WIDTH bound to: 16 - type: integer 
 	Parameter B_WIDTH bound to: 16 - type: integer 
 	Parameter C_WIDTH bound to: 32 - type: integer 
@@ -60,18 +64,18 @@ INFO: [Synth 8-6157] synthesizing module 'mac__parameterized0' [/home/soganli/gi
 INFO: [Synth 8-6155] done synthesizing module 'mac__parameterized0' (1#1) [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/mac.sv:23]
 INFO: [Synth 8-6155] done synthesizing module 'firFilter' (2#1) [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/sources_1/new/firFilter.sv:22]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2596.730 ; gain = 202.652 ; free physical = 5775 ; free virtual = 18821
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 2596.734 ; gain = 204.652 ; free physical = 6333 ; free virtual = 19579
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.574 ; gain = 219.496 ; free physical = 5730 ; free virtual = 18777
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2614.578 ; gain = 222.496 ; free physical = 6396 ; free virtual = 19646
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 2613.574 ; gain = 219.496 ; free physical = 5730 ; free virtual = 18777
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2614.578 ; gain = 222.496 ; free physical = 6396 ; free virtual = 19646
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00.03 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2613.574 ; gain = 0.000 ; free physical = 5784 ; free virtual = 18831
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.03 . Memory (MB): peak = 2614.578 ; gain = 0.000 ; free physical = 6376 ; free virtual = 19627
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -83,13 +87,13 @@ Resolution: Check if the specified object(s) exists in the current design. If it
 Finished Parsing XDC File [/home/soganli/git_workspace/Tbtk/firFilter/firFilter.srcs/constrs_1/new/systemConstraints.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2789.293 ; gain = 0.000 ; free physical = 5725 ; free virtual = 18772
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2790.297 ; gain = 0.000 ; free physical = 6138 ; free virtual = 19483
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2789.293 ; gain = 0.000 ; free physical = 5724 ; free virtual = 18771
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2790.297 ; gain = 0.000 ; free physical = 6138 ; free virtual = 19482
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2789.293 ; gain = 395.215 ; free physical = 5772 ; free virtual = 18819
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2790.297 ; gain = 398.215 ; free physical = 5861 ; free virtual = 19283
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -97,25 +101,25 @@ Start Loading Part and Timing Information
 Loading part: xcku115-flvb2104-2-i
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2789.293 ; gain = 395.215 ; free physical = 5772 ; free virtual = 18819
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2790.297 ; gain = 398.215 ; free physical = 5860 ; free virtual = 19282
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 2789.293 ; gain = 395.215 ; free physical = 5772 ; free virtual = 18819
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2790.297 ; gain = 398.215 ; free physical = 5856 ; free virtual = 19279
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 2789.293 ; gain = 395.215 ; free physical = 5771 ; free virtual = 18818
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 2790.297 ; gain = 398.215 ; free physical = 5792 ; free virtual = 19217
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Registers : 
-	              496 Bit    Registers := 1     
+	              992 Bit    Registers := 1     
 	               32 Bit    Registers := 1     
-	               16 Bit    Registers := 31    
+	               16 Bit    Registers := 16    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -131,326 +135,240 @@ Finished Part Resource Summary
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
-DSP Report: Generating DSP genblk1[0].DSP_MAC_MODULE_0/p_reg_reg, operation Mode is: ((A:0x3fffffea)'*B'')'.
-DSP Report: register tdata_buffer_reg is absorbed into DSP genblk1[0].DSP_MAC_MODULE_0/p_reg_reg.
-DSP Report: register genblk1[0].DSP_MAC_MODULE_0/a_reg_reg is absorbed into DSP genblk1[0].DSP_MAC_MODULE_0/p_reg_reg.
-DSP Report: register genblk1[0].DSP_MAC_MODULE_0/b_reg_reg is absorbed into DSP genblk1[0].DSP_MAC_MODULE_0/p_reg_reg.
-DSP Report: register genblk1[0].DSP_MAC_MODULE_0/p_reg_reg is absorbed into DSP genblk1[0].DSP_MAC_MODULE_0/p_reg_reg.
-DSP Report: register genblk1[0].DSP_MAC_MODULE_0/p_mid_reg is absorbed into DSP genblk1[0].DSP_MAC_MODULE_0/p_reg_reg.
-DSP Report: operator genblk1[0].DSP_MAC_MODULE_0/p_mid0 is absorbed into DSP genblk1[0].DSP_MAC_MODULE_0/p_reg_reg.
-DSP Report: Generating DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3fffffc1)'*B'')')'.
-DSP Report: register genblk1[1].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[1].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[1].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[1].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[1].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[1].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[1].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[1].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[1].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3fffffae)'*B'')')'.
-DSP Report: register genblk1[2].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[2].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[2].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[2].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[2].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[2].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[2].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[2].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[2].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x1)'*B'')')'.
-DSP Report: register genblk1[3].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[3].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[3].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[3].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[3].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[3].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[3].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[3].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[3].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0xe8)'*B'')')'.
-DSP Report: register genblk1[4].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[4].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[4].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[4].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[4].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[4].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[4].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[4].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[4].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x1fa)'*B'')')'.
-DSP Report: register genblk1[5].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[5].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[5].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[5].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[5].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[5].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[5].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[5].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[5].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x215)'*B'')')'.
-DSP Report: register genblk1[6].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[6].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[6].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[6].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[6].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[6].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[6].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[6].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[6].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x2)'*B'')')'.
-DSP Report: register genblk1[7].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[7].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[7].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[7].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[7].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[7].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[7].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[7].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[7].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3ffffbc1)'*B'')')'.
-DSP Report: register genblk1[8].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[8].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[8].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[8].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[8].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[8].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[8].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[8].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[8].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3ffff797)'*B'')')'.
-DSP Report: register genblk1[9].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[9].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[9].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[9].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[9].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[9].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[9].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[9].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[9].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3ffff7b3)'*B'')')'.
-DSP Report: register genblk1[10].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[10].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[10].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[10].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[10].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[10].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[10].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[10].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[10].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3ffffffa)'*B'')')'.
-DSP Report: register genblk1[11].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[11].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[11].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[11].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[11].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[11].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[11].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[11].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[11].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x1111)'*B'')')'.
-DSP Report: register genblk1[12].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[12].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[12].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[12].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[12].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[12].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[12].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[12].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[12].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x26b0)'*B'')')'.
-DSP Report: register genblk1[13].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[13].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[13].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[13].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[13].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[13].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[13].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[13].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[13].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x38e7)'*B'')')'.
-DSP Report: register genblk1[14].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[14].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[14].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[14].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[14].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[14].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[14].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[14].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[14].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x4008)'*B'')')'.
-DSP Report: register genblk1[15].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[15].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[15].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[15].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[15].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[15].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[15].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[15].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[15].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x38e7)'*B'')')'.
-DSP Report: register genblk1[16].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[16].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[14].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[16].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[16].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[16].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[16].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[16].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[16].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x26b0)'*B'')')'.
-DSP Report: register genblk1[17].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[17].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[13].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[17].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[17].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[17].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[17].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[17].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[17].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x1111)'*B'')')'.
-DSP Report: register genblk1[18].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[18].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[12].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[18].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[18].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[18].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[18].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[18].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[18].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3ffffffa)'*B'')')'.
-DSP Report: register genblk1[19].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[19].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[11].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[19].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[19].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[19].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[19].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[19].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[19].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3ffff7b3)'*B'')')'.
-DSP Report: register genblk1[20].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[20].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[10].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[20].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[20].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[20].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[20].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[20].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[20].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3ffff797)'*B'')')'.
-DSP Report: register genblk1[21].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[21].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[9].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[21].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[21].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[21].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[21].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[21].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[21].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3ffffbc1)'*B'')')'.
-DSP Report: register genblk1[22].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[22].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[8].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[22].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[22].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[22].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[22].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[22].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[22].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x2)'*B'')')'.
-DSP Report: register genblk1[23].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[23].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[7].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[23].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[23].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[23].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[23].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[23].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[23].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x215)'*B'')')'.
-DSP Report: register genblk1[24].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[24].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[6].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[24].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[24].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[24].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[24].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[24].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[24].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x1fa)'*B'')')'.
-DSP Report: register genblk1[25].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[25].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[5].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[25].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[25].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[25].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[25].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[25].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[25].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0xe8)'*B'')')'.
-DSP Report: register genblk1[26].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[26].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[4].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[26].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[26].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[26].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[26].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[26].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[26].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x1)'*B'')')'.
-DSP Report: register genblk1[27].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[27].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[3].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[27].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[27].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[27].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[27].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[27].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[27].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3fffffae)'*B'')')'.
-DSP Report: register genblk1[28].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[28].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[2].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[28].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[28].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[28].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[28].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[28].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[28].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3fffffc1)'*B'')')'.
-DSP Report: register genblk1[29].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[29].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[1].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[29].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[29].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[29].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[29].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[29].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[29].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: Generating DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((A:0x3fffffea)'*B'')')'.
-DSP Report: register genblk1[30].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[30].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[0].DSP_MAC_MODULE_0/b_reg_reg is absorbed into DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[30].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[30].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: register genblk1[30].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[30].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg.
-DSP Report: operator genblk1[30].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk1[30].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg, operation Mode is: ((D'+A'')*(B:0x3ffd7)'')'.
+DSP Report: register genblk2[0].DSP_MAC_MODULE_0/d_reg_reg is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: register genblk2[0].DSP_MAC_MODULE_0/b_reg_reg is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: register genblk2[0].DSP_MAC_MODULE_0/b_reg_s_reg is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: register genblk2[0].DSP_MAC_MODULE_0/p_reg_reg is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: register genblk2[0].DSP_MAC_MODULE_0/p_reg_reg is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: register genblk2[0].DSP_MAC_MODULE_0/p_mid_reg is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: register genblk2[0].DSP_MAC_MODULE_0/pre_add_reg is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: operator genblk2[0].DSP_MAC_MODULE_0/p_mid0 is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: operator genblk2[0].DSP_MAC_MODULE_0/pre_add0 is absorbed into DSP genblk2[0].DSP_MAC_MODULE_0/p_reg_reg.
+DSP Report: Generating DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x103)'')')'.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[1].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[1].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[1].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[1].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[1].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x21b)'')')'.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[2].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[2].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[2].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[2].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[2].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x2fc)'')')'.
+DSP Report: register genblk2[3].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[3].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[3].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[3].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[3].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[3].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[3].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[3].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[3].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[3].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[3].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[3].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x282)'')')'.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[4].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[4].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[4].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[4].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[4].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x3ffc3)'')')'.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[5].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[5].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[5].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[5].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[5].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x3fac5)'')')'.
+DSP Report: register genblk2[6].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[6].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[6].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[6].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[6].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[6].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[6].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[6].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[6].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[6].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[6].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[6].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x3f51d)'')')'.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[7].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[7].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[7].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[7].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[7].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x3f1dd)'')')'.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[8].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[8].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[8].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[8].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[8].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x3f4b5)'')')'.
+DSP Report: register genblk2[9].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[9].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[9].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[9].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[9].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[9].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[9].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[9].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[9].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[9].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[9].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[9].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x64)'')')'.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[10].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[10].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[10].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[10].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[10].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x1529)'')')'.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[11].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[11].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[11].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[11].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[11].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x2fea)'')')'.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[12].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[12].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[12].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[12].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[12].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x4aba)'')')'.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[13].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[13].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[13].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[13].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[13].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+((D'+A'')*(B:0x5e9a)'')')'.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[14].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[14].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[14].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[14].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[14].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: Generating DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg, operation Mode is: (C'+(((D:0x0)'+A'')*(B:0x65f1)'')')'.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/d_reg_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/b_reg_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/b_reg_s_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/a_reg_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/c_reg_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/p_pre_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/p_mid_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: register genblk2[15].DSP_MAC_MODULE_I/pre_add_reg is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[15].DSP_MAC_MODULE_I/p0 is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[15].DSP_MAC_MODULE_I/p_mid0 is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
+DSP Report: operator genblk2[15].DSP_MAC_MODULE_I/pre_add0 is absorbed into DSP genblk2[15].DSP_MAC_MODULE_I/p_pre_reg.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 2789.293 ; gain = 395.215 ; free physical = 5747 ; free virtual = 18797
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 2790.297 ; gain = 398.215 ; free physical = 5656 ; free virtual = 19050
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 
 DSP: Preliminary Mapping	Report (see note below)
-+------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|Module Name | DSP Mapping                  | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
-+------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
-|firFilter   | ((A:0x3fffffea)'*B'')'       | 16     | 16     | -      | -      | 32     | 2    | 1    | -    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3fffffc1)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3fffffae)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x1)'*B'')')'        | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0xe8)'*B'')')'       | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x1fa)'*B'')')'      | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x215)'*B'')')'      | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x2)'*B'')')'        | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3ffffbc1)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3ffff797)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3ffff7b3)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3ffffffa)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x1111)'*B'')')'     | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x26b0)'*B'')')'     | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x38e7)'*B'')')'     | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x4008)'*B'')')'     | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x38e7)'*B'')')'     | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x26b0)'*B'')')'     | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x1111)'*B'')')'     | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3ffffffa)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3ffff7b3)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3ffff797)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3ffffbc1)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x2)'*B'')')'        | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x215)'*B'')')'      | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x1fa)'*B'')')'      | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0xe8)'*B'')')'       | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x1)'*B'')')'        | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3fffffae)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3fffffc1)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-|firFilter   | (C'+((A:0x3fffffea)'*B'')')' | 16     | 16     | 32     | -      | 32     | 2    | 1    | 1    | -    | -     | 1    | 1    | 
-+------------+------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
++------------+--------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|Module Name | DSP Mapping                          | A Size | B Size | C Size | D Size | P Size | AREG | BREG | CREG | DREG | ADREG | MREG | PREG | 
++------------+--------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
+|mac         | ((D'+A'')*(B:0x3ffd7)'')'            | 16     | 16     | -      | 16     | 33     | 2    | 2    | -    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x103)'')')'        | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x21b)'')')'        | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x2fc)'')')'        | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x282)'')')'        | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x3ffc3)'')')'      | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x3fac5)'')')'      | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x3f51d)'')')'      | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x3f1dd)'')')'      | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x3f4b5)'')')'      | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x64)'')')'         | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x1529)'')')'       | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x2fea)'')')'       | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x4aba)'')')'       | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+((D'+A'')*(B:0x5e9a)'')')'       | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
+|mac         | (C'+(((D:0x0)'+A'')*(B:0x65f1)'')')' | 16     | 16     | 32     | 16     | 32     | 2    | 2    | 1    | 1    | 1     | 1    | 1    | 
++------------+--------------------------------------+--------+--------+--------+--------+--------+------+------+------+------+-------+------+------+
 
 Note: The table above is a preliminary report that shows the DSPs inferred at the current stage of the synthesis flow. Some DSP may be reimplemented as non DSP primitives later in the synthesis flow. Multiple instantiated DSPs are reported only once.
 ---------------------------------------------------------------------------------
@@ -460,19 +378,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 2847.777 ; gain = 453.699 ; free physical = 5418 ; free virtual = 18484
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2847.844 ; gain = 455.762 ; free physical = 5136 ; free virtual = 18505
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 2847.777 ; gain = 453.699 ; free physical = 5404 ; free virtual = 18469
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2847.844 ; gain = 455.762 ; free physical = 5128 ; free virtual = 18497
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:24 . Memory (MB): peak = 2857.793 ; gain = 463.715 ; free physical = 5397 ; free virtual = 18464
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:27 . Memory (MB): peak = 2855.852 ; gain = 463.770 ; free physical = 5131 ; free virtual = 18502
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -490,37 +408,51 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2863.730 ; gain = 469.652 ; free physical = 5398 ; free virtual = 18465
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2861.789 ; gain = 469.707 ; free physical = 6060 ; free virtual = 19342
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:26 . Memory (MB): peak = 2863.730 ; gain = 469.652 ; free physical = 5398 ; free virtual = 18465
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2861.789 ; gain = 469.707 ; free physical = 6060 ; free virtual = 19342
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2863.730 ; gain = 469.652 ; free physical = 5398 ; free virtual = 18465
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2861.789 ; gain = 469.707 ; free physical = 6061 ; free virtual = 19343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2863.730 ; gain = 469.652 ; free physical = 5398 ; free virtual = 18465
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2861.789 ; gain = 469.707 ; free physical = 6061 ; free virtual = 19343
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2863.730 ; gain = 469.652 ; free physical = 5398 ; free virtual = 18465
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2861.789 ; gain = 469.707 ; free physical = 6063 ; free virtual = 19345
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2863.730 ; gain = 469.652 ; free physical = 5398 ; free virtual = 18465
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2861.789 ; gain = 469.707 ; free physical = 6063 ; free virtual = 19345
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+Static Shift Register Report:
++------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|Module Name | RTL Name              | Length | Width | Reset Signal | Pull out first Reg | Pull out last Reg | SRL16E | SRLC32E | 
++------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+|firFilter   | tdata_buffer_reg[463] | 3      | 144   | NO           | NO                 | YES               | 144    | 0       | 
++------------+-----------------------+--------+-------+--------------+--------------------+-------------------+--------+---------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -537,43 +469,44 @@ Report Cell Usage:
 |      |Cell            |Count |
 +------+----------------+------+
 |1     |BUFG            |     1|
-|2     |DSP_ALU         |    31|
-|3     |DSP_A_B_DATA    |    31|
-|4     |DSP_C_DATA      |    31|
-|5     |DSP_MULTIPLIER  |    31|
-|6     |DSP_M_DATA      |    31|
-|7     |DSP_OUTPUT      |    31|
-|8     |DSP_PREADD      |    31|
-|9     |DSP_PREADD_DATA |    31|
-|10    |FDRE            |   512|
-|11    |IBUF            |    18|
-|12    |OBUF            |    32|
-|13    |OBUFT           |     2|
+|2     |DSP_ALU         |    16|
+|3     |DSP_A_B_DATA    |    16|
+|4     |DSP_C_DATA      |    16|
+|5     |DSP_MULTIPLIER  |    16|
+|6     |DSP_M_DATA      |    16|
+|7     |DSP_OUTPUT      |    16|
+|8     |DSP_PREADD      |    16|
+|9     |DSP_PREADD_DATA |    16|
+|10    |SRL16E          |   144|
+|11    |FDRE            |   480|
+|12    |IBUF            |    18|
+|13    |OBUF            |    32|
+|14    |OBUFT           |     2|
 +------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2863.730 ; gain = 469.652 ; free physical = 5398 ; free virtual = 18465
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2861.789 ; gain = 469.707 ; free physical = 6063 ; free virtual = 19345
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 2863.730 ; gain = 293.934 ; free physical = 5421 ; free virtual = 18488
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:27 . Memory (MB): peak = 2863.738 ; gain = 469.652 ; free physical = 5421 ; free virtual = 18488
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:29 . Memory (MB): peak = 2861.789 ; gain = 293.988 ; free physical = 6088 ; free virtual = 19371
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:30 . Memory (MB): peak = 2861.797 ; gain = 469.707 ; free physical = 6088 ; free virtual = 19371
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.02 . Memory (MB): peak = 2874.637 ; gain = 0.000 ; free physical = 5509 ; free virtual = 18573
-INFO: [Netlist 29-17] Analyzing 50 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2873.695 ; gain = 0.000 ; free physical = 6173 ; free virtual = 19458
+INFO: [Netlist 29-17] Analyzing 35 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2914.957 ; gain = 0.000 ; free physical = 5425 ; free virtual = 18489
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2909.383 ; gain = 0.000 ; free physical = 6121 ; free virtual = 19402
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 50 instances were transformed.
+  A total of 35 instances were transformed.
   BUFG => BUFGCE: 1 instance 
-  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 31 instances
+  DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 16 instances
   IBUF => IBUF (IBUFCTRL, INBUF): 18 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
 22 Infos, 1 Warnings, 1 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:35 . Memory (MB): peak = 2914.957 ; gain = 528.887 ; free physical = 5589 ; free virtual = 18653
+synth_design: Time (s): cpu = 00:00:34 ; elapsed = 00:00:40 . Memory (MB): peak = 2909.383 ; gain = 525.309 ; free physical = 6269 ; free virtual = 19550
 INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
 INFO: [Common 17-1381] The checkpoint '/home/soganli/git_workspace/Tbtk/firFilter/firFilter.runs/synth_1/firFilter.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file firFilter_utilization_synth.rpt -pb firFilter_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sun Apr 24 14:30:11 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 26 00:05:06 2022...

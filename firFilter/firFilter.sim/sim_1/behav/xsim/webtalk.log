@@ -2,12 +2,12 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sun Apr 24 00:56:39 2022
-# Process ID: 21307
+# Start of session at: Mon Apr 25 22:41:46 2022
+# Process ID: 10082
 # Current directory: /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim
 # Command line: wbtcv -mode batch -source /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/xsim.dir/firFilter_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
 source /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/xsim.dir/firFilter_tb_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Sun Apr 24 00:56:39 2022...
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr 25 22:41:46 2022...

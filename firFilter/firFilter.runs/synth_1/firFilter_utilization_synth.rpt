@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (lin64) Build 3064766 Wed Nov 18 09:12:47 MST 2020
-| Date         : Sun Apr 24 14:30:11 2022
+| Date         : Tue Apr 26 00:05:06 2022
 | Host         : soganli-G3-3579 running 64-bit Ubuntu 18.04.6 LTS
 | Command      : report_utilization -file firFilter_utilization_synth.rpt -pb firFilter_utilization_synth.pb
 | Design       : firFilter
@@ -32,20 +32,22 @@ Table of Contents
 1. CLB Logic
 ------------
 
-+-------------------------+------+-------+-----------+-------+
-|        Site Type        | Used | Fixed | Available | Util% |
-+-------------------------+------+-------+-----------+-------+
-| CLB LUTs*               |    0 |     0 |    663360 |  0.00 |
-|   LUT as Logic          |    0 |     0 |    663360 |  0.00 |
-|   LUT as Memory         |    0 |     0 |    293760 |  0.00 |
-| CLB Registers           |  512 |     0 |   1326720 |  0.04 |
-|   Register as Flip Flop |  512 |     0 |   1326720 |  0.04 |
-|   Register as Latch     |    0 |     0 |   1326720 |  0.00 |
-| CARRY8                  |    0 |     0 |     82920 |  0.00 |
-| F7 Muxes                |    0 |     0 |    331680 |  0.00 |
-| F8 Muxes                |    0 |     0 |    165840 |  0.00 |
-| F9 Muxes                |    0 |     0 |     82920 |  0.00 |
-+-------------------------+------+-------+-----------+-------+
++----------------------------+------+-------+-----------+-------+
+|          Site Type         | Used | Fixed | Available | Util% |
++----------------------------+------+-------+-----------+-------+
+| CLB LUTs*                  |  144 |     0 |    663360 |  0.02 |
+|   LUT as Logic             |    0 |     0 |    663360 |  0.00 |
+|   LUT as Memory            |  144 |     0 |    293760 |  0.05 |
+|     LUT as Distributed RAM |    0 |     0 |           |       |
+|     LUT as Shift Register  |  144 |     0 |           |       |
+| CLB Registers              |  480 |     0 |   1326720 |  0.04 |
+|   Register as Flip Flop    |  480 |     0 |   1326720 |  0.04 |
+|   Register as Latch        |    0 |     0 |   1326720 |  0.00 |
+| CARRY8                     |    0 |     0 |     82920 |  0.00 |
+| F7 Muxes                   |    0 |     0 |    331680 |  0.00 |
+| F8 Muxes                   |    0 |     0 |    165840 |  0.00 |
+| F9 Muxes                   |    0 |     0 |     82920 |  0.00 |
++----------------------------+------+-------+-----------+-------+
 * Warning! The Final LUT count, after physical optimizations and full implementation, is typically lower. Run opt_design after synthesis, if not already completed, for a more realistic count.
 
 
@@ -64,7 +66,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 512   |          Yes |       Reset |            - |
+| 480   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -87,8 +89,8 @@ Table of Contents
 +----------------+------+-------+-----------+-------+
 |    Site Type   | Used | Fixed | Available | Util% |
 +----------------+------+-------+-----------+-------+
-| DSPs           |   31 |     0 |      5520 |  0.56 |
-|   DSP48E2 only |   31 |       |           |       |
+| DSPs           |   16 |     0 |      5520 |  0.29 |
+|   DSP48E2 only |   16 |       |           |       |
 +----------------+------+-------+-----------+-------+
 
 
@@ -157,11 +159,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  512 |            Register |
+| FDRE     |  480 |            Register |
+| SRL16E   |  144 |                 CLB |
 | OBUF     |   32 |                 I/O |
-| DSP48E2  |   31 |          Arithmetic |
 | INBUF    |   18 |                 I/O |
 | IBUFCTRL |   18 |              Others |
+| DSP48E2  |   16 |          Arithmetic |
 | OBUFT    |    2 |                 I/O |
 | BUFGCE   |    1 |               Clock |
 +----------+------+---------------------+
