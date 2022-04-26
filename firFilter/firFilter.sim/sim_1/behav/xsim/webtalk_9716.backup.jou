@@ -2,11 +2,11 @@
 # Webtalk v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Sat Apr 23 22:02:52 2022
-# Process ID: 23744
+# Start of session at: Wed Apr 27 00:58:53 2022
+# Process ID: 9716
 # Current directory: /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim
-# Command line: wbtcv -mode batch -source /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/xsim.dir/mac_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv -mode batch -source /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/xsim.dir/firFilter_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/xsim.dir/mac_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+source /home/soganli/git_workspace/Tbtk/firFilter/firFilter.sim/sim_1/behav/xsim/xsim.dir/firFilter_tb_behav/webtalk/xsim_webtalk.tcl -notrace

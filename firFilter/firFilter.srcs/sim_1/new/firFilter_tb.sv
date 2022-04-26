@@ -102,7 +102,7 @@ if(DATA_RATIO == 1)
         if(data_enable)
         begin
             data_count          <= data_count + 1;
-            s_axis_data_tdata   <= s_axis_data_tdata_set[data_count];
+            s_axis_data_tdata   <= s_axis_data_tdata + 1; //s_axis_data_tdata_set[data_count];
             s_axis_data_tvalid  <= 1;
         end
         else

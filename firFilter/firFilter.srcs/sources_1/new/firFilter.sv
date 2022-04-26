@@ -73,9 +73,9 @@ module firFilter#(
     else if(DATA_RATIO == 2)
         always_ff@(posedge a_clk)
             if(s_axis_data_tvalid_s)
-                mac_data_in <= tdata_buffer[0+:(BUFFER_LEN/2-1)*A_WIDTH];
+                mac_data_in <= {(BUFFER_LEN/2-1){tdata_buffer[0+:A_WIDTH]}};
             else
-                mac_data_in <= tdata_buffer[(BUFFER_LEN/2-1)*A_WIDTH+:(BUFFER_LEN/2-1)*A_WIDTH];            
+                mac_data_in <= {(BUFFER_LEN/2-1){tdata_buffer[(BUFFER_LEN/2)*A_WIDTH+:A_WIDTH]}};            
     endgenerate
 
    
