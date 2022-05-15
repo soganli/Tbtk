@@ -13,13 +13,13 @@
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
       <ZoomEndTime time="2030001fs"></ZoomEndTime>
-      <Cursor1Time time="992500fs"></Cursor1Time>
+      <Cursor1Time time="1367500fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
       <ValueColumnWidth column_width="112"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="28" />
+   <WVObjectSize size="29" />
    <wvobject type="array" fp_name="/firFilter_tb/uut/s_axis_data_tdata">
       <obj_property name="ElementShortName">s_axis_data_tdata[15:0]</obj_property>
       <obj_property name="ObjectShortName">s_axis_data_tdata[15:0]</obj_property>
@@ -1510,7 +1510,6 @@
    <wvobject type="group" fp_name="group1912">
       <obj_property name="label">MAC7</obj_property>
       <obj_property name="DisplayName">label</obj_property>
-      <obj_property name="isExpanded"></obj_property>
       <wvobject type="array" fp_name="/firFilter_tb/uut/\genblk2[6].genblk1.DSP_MAC_MODULE_I /a">
          <obj_property name="ElementShortName">a[15:0]</obj_property>
          <obj_property name="ObjectShortName">a[15:0]</obj_property>
@@ -1690,6 +1689,45 @@
       <wvobject type="array" fp_name="/firFilter_tb/uut/\genblk2[7].genblk1.DSP_MAC_MODULE_I /p_reg">
          <obj_property name="ElementShortName">p_reg[32:0]</obj_property>
          <obj_property name="ObjectShortName">p_reg[32:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
+         <obj_property name="CellHeight">100</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject type="group" fp_name="group2045">
+      <obj_property name="label">ACCUM</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="isExpanded"></obj_property>
+      <wvobject type="array" fp_name="/firFilter_tb/uut/MacAccumulator/data_in">
+         <obj_property name="ElementShortName">data_in[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_in[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/firFilter_tb/uut/MacAccumulator/data_in_v">
+         <obj_property name="ElementShortName">data_in_v</obj_property>
+         <obj_property name="ObjectShortName">data_in_v</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/firFilter_tb/uut/MacAccumulator/rstn">
+         <obj_property name="ElementShortName">rstn</obj_property>
+         <obj_property name="ObjectShortName">rstn</obj_property>
+      </wvobject>
+      <wvobject type="logic" fp_name="/firFilter_tb/uut/MacAccumulator/clk">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/firFilter_tb/uut/MacAccumulator/data_out">
+         <obj_property name="ElementShortName">data_out[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/firFilter_tb/uut/MacAccumulator/data_accum">
+         <obj_property name="ElementShortName">data_accum[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_accum[31:0]</obj_property>
+         <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+      </wvobject>
+      <wvobject type="array" fp_name="/firFilter_tb/uut/MacAccumulator/data_out_pre">
+         <obj_property name="ElementShortName">data_out_pre[31:0]</obj_property>
+         <obj_property name="ObjectShortName">data_out_pre[31:0]</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
          <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
          <obj_property name="CellHeight">100</obj_property>

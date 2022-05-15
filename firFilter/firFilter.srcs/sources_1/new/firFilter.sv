@@ -56,6 +56,7 @@ module firFilter#(
     end
     
     logic   [8-1:0] data_cntr;
+    logic           mac_data_v;
     always_ff@(posedge a_clk)
     begin
         if(!a_resetn)
@@ -64,6 +65,8 @@ module firFilter#(
             data_cntr   <= 0;
         else
             data_cntr   <= data_cntr + 1;
+            
+        mac_data_v      <= ~|data_cntr;        
     end    
     
     logic signed [BUFFER_LEN*A_WIDTH-1:0]  tdata_buffer;
@@ -173,11 +176,28 @@ module firFilter#(
         );
     endgenerate        
     
-    logic signed [(A_WIDTH+B_WIDTH)-1:0]    filter_out;
+    logic signed [(A_WIDTH+B_WIDTH)-1:0]    mac_data;
     always_ff@(posedge a_clk)
-        filter_out   <= mac_buffer[DSP_NUMBER*(A_WIDTH+B_WIDTH)-1-:(A_WIDTH+B_WIDTH)];
+        mac_data   <= mac_buffer[DSP_NUMBER*(A_WIDTH+B_WIDTH)-1-:(A_WIDTH+B_WIDTH)];
+    
+    
+    logic signed [(A_WIDTH+B_WIDTH)-1:0]    accum_out;    
+    accumulator#
+    (
+        .A_WIDTH(A_WIDTH+B_WIDTH)       
+    ) 
+    MacAccumulator 
+    (
+        .data_in(mac_data),       // First  data  to be multiplied
+        .data_in_v(mac_data_v),                                                      // Second data to be multiplied
+        .clk(a_clk),
+        .rstn(a_resetn),
+        .data_out(accum_out)
+    );    
+    
+    
         
-    assign  m_axis_data_tdata = filter_out;
+    assign  m_axis_data_tdata = accum_out;
     
 function int numDsp;
     input int DATA_RATIO,FILTER_IS_SYMMETRIC,FILTER_TYPE,DECIMATION_NUMBER,INTERPOLATION_NUMBER,FILTER_LENGTH;    
