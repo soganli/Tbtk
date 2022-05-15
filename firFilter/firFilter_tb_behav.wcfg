@@ -11,9 +11,9 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="2030001fs"></ZoomEndTime>
-      <Cursor1Time time="1367500fs"></Cursor1Time>
+      <ZoomStartTime time="1980666fs"></ZoomStartTime>
+      <ZoomEndTime time="2039867fs"></ZoomEndTime>
+      <Cursor1Time time="2030000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="276"></NameColumnWidth>
@@ -24,8 +24,7 @@
       <obj_property name="ElementShortName">s_axis_data_tdata[15:0]</obj_property>
       <obj_property name="ObjectShortName">s_axis_data_tdata[15:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-      <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-      <obj_property name="CellHeight">100</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
    <wvobject type="logic" fp_name="/firFilter_tb/uut/s_axis_data_tready">
       <obj_property name="ElementShortName">s_axis_data_tready</obj_property>
@@ -1690,8 +1689,7 @@
          <obj_property name="ElementShortName">p_reg[32:0]</obj_property>
          <obj_property name="ObjectShortName">p_reg[32:0]</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
    </wvobject>
    <wvobject type="group" fp_name="group2045">
@@ -1729,8 +1727,7 @@
          <obj_property name="ElementShortName">data_out_pre[31:0]</obj_property>
          <obj_property name="ObjectShortName">data_out_pre[31:0]</obj_property>
          <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-         <obj_property name="WaveformStyle">STYLE_ANALOG</obj_property>
-         <obj_property name="CellHeight">100</obj_property>
+         <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
       </wvobject>
    </wvobject>
 </wave_config>

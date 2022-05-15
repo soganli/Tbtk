@@ -56,7 +56,7 @@ module firFilter#(
     end
     
     logic   [8-1:0] data_cntr;
-    logic           mac_data_v;
+    logic           mac_data_v,mac_data_v_pre;
     always_ff@(posedge a_clk)
     begin
         if(!a_resetn)
@@ -66,7 +66,7 @@ module firFilter#(
         else
             data_cntr   <= data_cntr + 1;
             
-        mac_data_v      <= ~|data_cntr;        
+        {mac_data_v,mac_data_v_pre}      <= {mac_data_v_pre,~|data_cntr};        
     end    
     
     logic signed [BUFFER_LEN*A_WIDTH-1:0]  tdata_buffer;
