@@ -44,7 +44,9 @@ module firFilter#(
     
     localparam DSP_DECIM  = (FILTER_TYPE == 0) ? 1 : ((FILTER_TYPE==1) ? DECIMATION_NUMBER : INTERPOLATION_NUMBER);
     localparam DSP_NUMBER = numDsp(DATA_RATIO,FILTER_IS_SYMMETRIC,FILTER_TYPE,DECIMATION_NUMBER,INTERPOLATION_NUMBER,FILTER_LENGTH);
-    localparam BUFFER_LEN = FILTER_LENGTH;
+    localparam BUFFER_LEN = FILTER_LENGTH+1;
+    genvar i;
+
 
     logic   [B_WIDTH-1:0]    COEF_MEM  [FILTER_LENGTH-1:0];
     
@@ -53,7 +55,16 @@ module firFilter#(
         $readmemb("firCoefficients.mem", COEF_MEM);
     end
     
-
+    logic   [8-1:0] data_cntr;
+    always_ff@(posedge a_clk)
+    begin
+        if(!a_resetn)
+            data_cntr   <= 0;
+        else if(s_axis_data_tvalid)
+            data_cntr   <= 0;
+        else
+            data_cntr   <= data_cntr + 1;
+    end    
     
     logic signed [BUFFER_LEN*A_WIDTH-1:0]  tdata_buffer;
     logic                                  s_axis_data_tvalid_s;
@@ -72,26 +83,28 @@ module firFilter#(
         mac_data_in <= tdata_buffer;
     else if(DATA_RATIO == 2)
         always_ff@(posedge a_clk)
-            if(s_axis_data_tvalid_s)
-                mac_data_in <= {(BUFFER_LEN/2-1){tdata_buffer[0+:A_WIDTH]}};
-            else
-                mac_data_in <= {(BUFFER_LEN/2-1){tdata_buffer[(BUFFER_LEN/2)*A_WIDTH+:A_WIDTH]}};            
+            mac_data_in                 <= {(BUFFER_LEN/DATA_RATIO-1){tdata_buffer[(BUFFER_LEN-data_cntr*(BUFFER_LEN/DATA_RATIO))*A_WIDTH-1-:A_WIDTH]}};    
+    else if(DATA_RATIO == 4)
+        for(i=0; i<BUFFER_LEN; i=i+1)
+            always_ff@(posedge a_clk)
+                    mac_data_in[BUFFER_LEN*A_WIDTH-A_WIDTH*i-1-:A_WIDTH] <= tdata_buffer[(BUFFER_LEN - data_cntr*(BUFFER_LEN/DATA_RATIO))*A_WIDTH-1-:A_WIDTH];                                            
     endgenerate
 
    
     
     
     logic signed [DSP_NUMBER*(A_WIDTH+B_WIDTH)-1:0] mac_buffer;
-    genvar i;
     generate
     for(i=0;i<DSP_NUMBER; i=i+1)
     if(i==0)
         mac#
         (
+            .DATA_RATIO(DATA_RATIO),
             .PRE_ADDITION(FILTER_IS_SYMMETRIC),
             .POST_ADDITION(0),
             .REGISTER_INPUT(1),
             .REGISTER_OUTPUT(1),
+            .MAC_INDEX(DSP_NUMBER-1-i),
             .A_WIDTH(A_WIDTH),
             .B_WIDTH(B_WIDTH),
             .C_WIDTH(A_WIDTH+B_WIDTH),
@@ -111,10 +124,12 @@ module firFilter#(
     else if((i == (DSP_NUMBER-1)) && (FILTER_LENGTH%2))
         mac#
         (
+            .DATA_RATIO(DATA_RATIO),        
             .PRE_ADDITION(FILTER_IS_SYMMETRIC),
             .POST_ADDITION(1),
             .REGISTER_INPUT(1),
             .REGISTER_OUTPUT(0),
+            .MAC_INDEX(DSP_NUMBER-1-i),
             .A_WIDTH(A_WIDTH),
             .B_WIDTH(B_WIDTH),
             .C_WIDTH(A_WIDTH+B_WIDTH),
@@ -134,10 +149,12 @@ module firFilter#(
     else
         mac#
         (
+            .DATA_RATIO(DATA_RATIO),        
             .PRE_ADDITION(FILTER_IS_SYMMETRIC),
             .POST_ADDITION(1),
             .REGISTER_INPUT(1),
             .REGISTER_OUTPUT(0),
+            .MAC_INDEX(DSP_NUMBER-1-i),
             .A_WIDTH(A_WIDTH),
             .B_WIDTH(B_WIDTH),
             .C_WIDTH(A_WIDTH+B_WIDTH),
@@ -186,7 +203,7 @@ function int numDsp;
         begin
              if(FILTER_TYPE == 0)
                 if(FILTER_LENGTH%2)
-                    numDsp = (FILTER_LENGTH/(DATA_RATIO));
+                    numDsp = (1 + FILTER_LENGTH/(DATA_RATIO));
                 else
                     numDsp = (FILTER_LENGTH/(DATA_RATIO));
             else if(FILTER_TYPE == 1)

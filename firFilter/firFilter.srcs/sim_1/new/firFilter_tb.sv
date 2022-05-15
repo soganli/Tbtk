@@ -21,9 +21,9 @@
 
 
 module firFilter_tb;
-    parameter DATA_RATIO            = 2; // Ratio of data_clk to system_clk
+    parameter DATA_RATIO            = 4; // Ratio of data_clk to system_clk
     parameter FILTER_TYPE           = 0; // 0: SingleRate , 1:Decimation, 2:Interpolation
-    parameter DECIMATION_NUMBER     = 2; // If this is a Decimation Filter
+    parameter DECIMATION_NUMBER     = 1; // If this is a Decimation Filter
     parameter INTERPOLATION_NUMBER  = 1; // If this is an Interpolation Filter
     parameter FILTER_LENGTH         = 31;
     parameter FILTER_IS_SYMMETRIC   = 0;
@@ -89,7 +89,7 @@ begin
     #30;
     data_enable = 1;
     
-    #20000;
+    #2000;
     $stop;
 end   
 
@@ -112,7 +112,7 @@ if(DATA_RATIO == 1)
             s_axis_data_tvalid  <= 0;
         end
     end
-else
+else if(DATA_RATIO == 2)
     always_ff@(posedge a_clk)
     begin
         if(data_enable)
@@ -128,6 +128,22 @@ else
             s_axis_data_tvalid  <= 0;
         end
     end
+else if(DATA_RATIO == 4)
+    always_ff@(posedge a_clk)
+    begin
+        if(data_enable)
+        begin
+            data_count          <= data_count + 1;
+            s_axis_data_tdata   <= s_axis_data_tdata_set[data_count[14-1:2]];
+            s_axis_data_tvalid  <= ~(|data_count[1:0]);
+        end
+        else
+        begin
+            data_count          <= 0;
+            s_axis_data_tdata   <= 0;
+            s_axis_data_tvalid  <= 0;
+        end
+    end    
 endgenerate
         
 always 

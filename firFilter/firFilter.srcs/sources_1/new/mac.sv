@@ -21,11 +21,13 @@
 
 
 module mac#(
+    parameter DATA_RATIO      = 1,
     parameter PRE_ADDITION    = 1,
     parameter POST_ADDITION   = 1,
     parameter REGISTER_INPUT  = 1,
     parameter REGISTER_OUTPUT = 1,
     parameter FILTER_IS_SYMMETRIC = 1,    
+    parameter MAC_INDEX       = 0,
     parameter A_WIDTH         = 16,
     parameter B_WIDTH         = 16,
     parameter C_WIDTH         = 32,
@@ -47,6 +49,23 @@ module mac#(
     localparam PRE_ADD_SIZE = max(A_WIDTH,D_WIDTH) + 1;
     localparam PRODUCT_SIZE = PRE_ADD_SIZE + B_WIDTH;
     
+    logic   signed  [A_WIDTH-1:0]   a_buff_s;    
+    generate
+        if((DATA_RATIO <= 2))
+        begin
+            always_comb
+                a_buff_s  <= a;         
+        end
+        else
+        begin
+            logic   signed  [((MAC_INDEX+1)*(DATA_RATIO-2))*A_WIDTH-1:0]   a_buff;
+            always_ff@(posedge clk)
+                a_buff    <={a_buff[((MAC_INDEX+1)*(DATA_RATIO-2)-1)*A_WIDTH-1:0],a};
+            always_comb
+                a_buff_s  <= a_buff[((MAC_INDEX+1)*(DATA_RATIO-2)-1)*A_WIDTH+:A_WIDTH]; 
+        end
+    endgenerate
+    
     logic signed [A_WIDTH-1:0]  a_reg;
     logic signed [B_WIDTH-1:0]  b_reg;
     logic signed [C_WIDTH-1:0]  c_reg;
@@ -56,7 +75,7 @@ module mac#(
         if(REGISTER_INPUT)
             always_ff@(posedge clk)
             begin
-                a_reg   <= a;
+                a_reg   <= a_buff_s;
                 b_reg   <= b;
                 c_reg   <= c;
                 d_reg   <= d;                
@@ -64,7 +83,7 @@ module mac#(
         else
             always_comb
             begin
-                a_reg    <= a;
+                a_reg    <= a_buff_s;
                 b_reg    <= b;
                 c_reg    <= c;
                 d_reg    <= d;
